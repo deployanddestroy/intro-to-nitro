@@ -1,0 +1,7 @@
+# .dockerignore
+/.nitro
+/.output
+/node_modules
+
+.gitignore
+README.md
