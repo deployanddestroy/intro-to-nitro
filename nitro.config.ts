@@ -2,7 +2,8 @@
 export default defineNitroConfig({
     srcDir: "server",
     experimental: {
-        database: true
+        database: true,
+        tasks: true
     },
     devDatabase: {
         default: {
@@ -19,5 +20,8 @@ export default defineNitroConfig({
                 url: 'postgresql://postgres:{yourpasswordhere}@postgres.railway.internal:5432/railway'
             }
         }
+    },
+    scheduledTasks: {
+        '* * * * *': ['aggregate:products']
     }
 });
